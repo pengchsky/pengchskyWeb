@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  pengchsky-web:
+    container_name: pengchsky-web
+    image: registry.cn-beijing.aliyuncs.com/yoyo2020/pengchsky-web:DOCKER_IMAGE_TAG
+    restart: always
+    ports:
+      - "6343:80"
+    networks:
+      - hostnet
+networks:
+  hostnet:
+    external: true
+    name: overall_communication
